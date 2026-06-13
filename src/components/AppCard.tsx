@@ -1,5 +1,20 @@
 import React from 'react';
-import { IApp } from '../interfaces/app.interface';
+
+// সরাসরি ফাইলের ভেতরেই ইন্টারফেস ডিফাইন করে দেওয়া হলো যেন ইম্পোর্ট এরর পুরোপুরি দূর হয়
+export interface IApp {
+  id: string;
+  name: string;
+  category: 'Apps' | 'Games';
+  subCategory: string;
+  rating: number;
+  reviewsCount: string;
+  size: string;
+  iconUrl: string;
+  isFree: boolean;
+  price?: number;
+  developer: string;
+  description: string;
+}
 
 interface AppCardProps {
   app: IApp;
